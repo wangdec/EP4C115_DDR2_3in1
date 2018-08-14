@@ -1,0 +1,47 @@
+	component ddr2_nios is
+		port (
+			clk_clk             : in    std_logic                     := 'X';             -- clk
+			reset_reset_n       : in    std_logic                     := 'X';             -- reset_n
+			ddr2_side_mem_odt   : out   std_logic_vector(0 downto 0);                     -- mem_odt
+			ddr2_side_mem_clk   : inout std_logic_vector(0 downto 0)  := (others => 'X'); -- mem_clk
+			ddr2_side_mem_clk_n : inout std_logic_vector(0 downto 0)  := (others => 'X'); -- mem_clk_n
+			ddr2_side_mem_cs_n  : out   std_logic_vector(0 downto 0);                     -- mem_cs_n
+			ddr2_side_mem_cke   : out   std_logic_vector(0 downto 0);                     -- mem_cke
+			ddr2_side_mem_addr  : out   std_logic_vector(12 downto 0);                    -- mem_addr
+			ddr2_side_mem_ba    : out   std_logic_vector(1 downto 0);                     -- mem_ba
+			ddr2_side_mem_ras_n : out   std_logic;                                        -- mem_ras_n
+			ddr2_side_mem_cas_n : out   std_logic;                                        -- mem_cas_n
+			ddr2_side_mem_we_n  : out   std_logic;                                        -- mem_we_n
+			ddr2_side_mem_dq    : inout std_logic_vector(15 downto 0) := (others => 'X'); -- mem_dq
+			ddr2_side_mem_dqs   : inout std_logic_vector(1 downto 0)  := (others => 'X'); -- mem_dqs
+			ddr2_side_mem_dm    : out   std_logic_vector(1 downto 0);                     -- mem_dm
+			altpll_150m_clk     : out   std_logic;                                        -- clk
+			ddr2_bot_mem_odt    : out   std_logic_vector(0 downto 0);                     -- mem_odt
+			ddr2_bot_mem_clk    : inout std_logic_vector(1 downto 0)  := (others => 'X'); -- mem_clk
+			ddr2_bot_mem_clk_n  : inout std_logic_vector(1 downto 0)  := (others => 'X'); -- mem_clk_n
+			ddr2_bot_mem_cs_n   : out   std_logic_vector(0 downto 0);                     -- mem_cs_n
+			ddr2_bot_mem_cke    : out   std_logic_vector(0 downto 0);                     -- mem_cke
+			ddr2_bot_mem_addr   : out   std_logic_vector(12 downto 0);                    -- mem_addr
+			ddr2_bot_mem_ba     : out   std_logic_vector(1 downto 0);                     -- mem_ba
+			ddr2_bot_mem_ras_n  : out   std_logic;                                        -- mem_ras_n
+			ddr2_bot_mem_cas_n  : out   std_logic;                                        -- mem_cas_n
+			ddr2_bot_mem_we_n   : out   std_logic;                                        -- mem_we_n
+			ddr2_bot_mem_dq     : inout std_logic_vector(47 downto 0) := (others => 'X'); -- mem_dq
+			ddr2_bot_mem_dqs    : inout std_logic_vector(5 downto 0)  := (others => 'X'); -- mem_dqs
+			ddr2_bot_mem_dm     : out   std_logic_vector(5 downto 0);                     -- mem_dm
+			ddr2_top_mem_odt    : out   std_logic_vector(0 downto 0);                     -- mem_odt
+			ddr2_top_mem_clk    : inout std_logic_vector(1 downto 0)  := (others => 'X'); -- mem_clk
+			ddr2_top_mem_clk_n  : inout std_logic_vector(1 downto 0)  := (others => 'X'); -- mem_clk_n
+			ddr2_top_mem_cs_n   : out   std_logic_vector(0 downto 0);                     -- mem_cs_n
+			ddr2_top_mem_cke    : out   std_logic_vector(0 downto 0);                     -- mem_cke
+			ddr2_top_mem_addr   : out   std_logic_vector(12 downto 0);                    -- mem_addr
+			ddr2_top_mem_ba     : out   std_logic_vector(1 downto 0);                     -- mem_ba
+			ddr2_top_mem_ras_n  : out   std_logic;                                        -- mem_ras_n
+			ddr2_top_mem_cas_n  : out   std_logic;                                        -- mem_cas_n
+			ddr2_top_mem_we_n   : out   std_logic;                                        -- mem_we_n
+			ddr2_top_mem_dq     : inout std_logic_vector(47 downto 0) := (others => 'X'); -- mem_dq
+			ddr2_top_mem_dqs    : inout std_logic_vector(5 downto 0)  := (others => 'X'); -- mem_dqs
+			ddr2_top_mem_dm     : out   std_logic_vector(5 downto 0)                      -- mem_dm
+		);
+	end component ddr2_nios;
+
